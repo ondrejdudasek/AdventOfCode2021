@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-
-from math import dist
-from re import X
 from sys import argv,exit
 from pathlib import Path
-from turtle import pos, position
+
 
 """! @brief Advent of Code 2021 Day 2 """
 
