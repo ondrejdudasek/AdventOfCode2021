@@ -8,25 +8,43 @@ from pathlib import Path
 
 def day1(filename):
     
-    previous_number = None
+    samples = []
     increment_counter = 0
-    current_line = 1
+    previous_sum = None
+    current_line = 0
 
     try:
         file = Path(filename)
         fd = file.open('r')
-        line = fd.readline()
-        previous_number = int(line)
 
         for line in fd.readlines():
             current_line = current_line + 1
+
             line = line.strip()
-            if(line) == '':
+            if(line) == '': # Line is empty
                 continue
-            current_number = int(line)
-            if previous_number < current_number:
+
+            samples.append(int(line))
+            if len(samples) < 3: # not enough samples
+                continue
+
+            current_sum = sum(samples)
+            #print(samples, end=' ')
+            samples.pop(0) # Remove first
+
+            
+            if previous_sum == None:
+                previous_sum = current_sum
+                #print(current_sum, 'False')
+                continue
+
+            #print(current_sum, (current_sum > previous_sum))
+            if previous_sum < current_sum:
                 increment_counter = increment_counter + 1
-            previous_number = current_number
+            
+            previous_sum = current_sum
+
+            
 
     except FileNotFoundError:
         print("File not found")
@@ -39,13 +57,9 @@ def day1(filename):
     except ValueError:
         print('Invalid number on line:' + str(current_line))
     
-    print('Number has increased ' + str(increment_counter) + ' times.')    
+    print('Sum has increased ' + str(increment_counter) + ' times.')    
     return increment_counter
         
-
-
-
-
 
 
 
