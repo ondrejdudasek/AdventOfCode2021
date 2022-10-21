@@ -1,4 +1,4 @@
-# AdventOfCode2021
+# Advent Of Code 2021
 
 All scripts take input file name as first argument (like this: `python3 day01.py input`)
 
@@ -12,5 +12,5 @@ Completed
 Completed
 
 ## Day 22
-Part 1 completed
-Part 2 contains error, removing blocks causes incorrect reported number of turned on blocks.
+ * Part 1 completed
+ * Part 2 contains error, removing blocks causes incorrect reported number of turned on blocks.
