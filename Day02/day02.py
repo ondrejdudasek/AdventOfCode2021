@@ -8,6 +8,7 @@ from pathlib import Path
 
 def day2(filename):
     
+    print("[Part 1]")
     current_line = 0
 
     depth = 0
@@ -61,6 +62,7 @@ def day2(filename):
     return position * depth
 
 def day2_part2(filename):
+    print("[Part 2]")
     current_line = 0
 
     depth = 0
@@ -118,8 +120,10 @@ def day2_part2(filename):
 
 
 if argv[1] != None:
-    if not day2_part2(argv[1]) == False:
-        exit(0)
-    exit(1)
+    if day2(argv[1]) == False:
+        exit(1)
+    if day2_part2(argv[1]) == False:
+        exit(1)
+    exit(0)
 
 
