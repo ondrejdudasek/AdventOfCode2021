@@ -6,7 +6,6 @@ from pathlib import Path
 
 def day1(filename):
     
-    print("[Part 1]")
     increment_counter = 0
     previous_number = None
     current_line = 0
@@ -55,8 +54,6 @@ def day1(filename):
 
 def day1_p2(filename):
     
-    print("[Part 2]")
-
     samples = []
     increment_counter = 0
     previous_sum = None
@@ -114,9 +111,11 @@ def day1_p2(filename):
 
 
 if argv[1] != None:
+    print("[Part 1]")
     if day1(argv[1]) == False:
         exit(1)
 
+    print("[Part 2]")
     if day1_p2(argv[1]) == False:
         exit(1)
     exit(0)

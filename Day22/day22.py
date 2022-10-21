@@ -110,11 +110,10 @@ def day22(filename):
             
             if command == 'off':
                 set_blocks(reactor, [x, y, z], False)
-                print(reactor[x[0]:x[1]][y[0]:y[1]][z[0]:z[1]])
 
-            print("Reactor sum is %d"%reactor.sum())
 
-        print(reactor.sum())
+        print("Reactor sum is %d"%reactor.sum())
+
 
     except FileNotFoundError:
         print("File not found")

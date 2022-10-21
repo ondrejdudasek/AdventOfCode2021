@@ -335,9 +335,8 @@ def day22_part2(filename):
                 reactor.remove_block(Block(x,y,z))
                  
 
-            print("Reactor sum is %d"%reactor.sum())
+        print("Reactor sum is %d"%reactor.sum())
 
-        print(reactor.sum())
 
     except FileNotFoundError:
         print("File not found")

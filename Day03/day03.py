@@ -187,8 +187,13 @@ def day3_part2(filename):
 
 
 if argv[1] != None:
+    print("[Part 1]")
+    if not day3(argv[1]) == False:
+        exit(1)
+
+    print("[Part 2]")
     if not day3_part2(argv[1]) == False:
-        exit(0)
-    exit(1)
+        exit(1)
+    exit(0)
 
 
